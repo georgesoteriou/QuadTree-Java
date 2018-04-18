@@ -86,7 +86,6 @@ public class Qtree<T> {
         if (RangeIntersectsPoint(topLeft, width, height, p)) {
           pointsInRange.add(p);
         }
-        Main.count2++;
       }
     }else{
       pointsInRange.addAll(NW.getPoints(topLeft,width,height));
