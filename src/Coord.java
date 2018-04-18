@@ -7,4 +7,8 @@ public class Coord {
     this.y = y;
   }
 
+  @Override
+  public String toString() {
+    return "("+x+","+y+")";
+  }
 }

@@ -71,11 +71,11 @@ public class Qtree<T> {
     return intersects(this.topLeft, this.width, this.width, point.coord, 0, 0);
   }
 
-  public boolean RangeIntersectsPoint(Coord topLeft, double width, double height, Point<T> point){
+  boolean RangeIntersectsPoint(Coord topLeft, double width, double height, Point<T> point){
     return intersects(topLeft, width, height, point.coord, 0, 0);
   }
 
-  public Set<Point<T>> getPoints(Coord topLeft, double width, double height) {
+  Set<Point<T>> getPoints(Coord topLeft, double width, double height) {
     Set<Point<T>> pointsInRange = new HashSet<>();
     if(!this.QtreeTntersectsRange(topLeft,width,height)){
       return pointsInRange;
@@ -113,10 +113,10 @@ public class Qtree<T> {
   public String toString() {
     StringBuilder sb = new StringBuilder();
     if(NW != null){
-      sb.append("NW:  ").append(NW.toString().replaceAll("\n", "\n     ")).append('\n');
-      sb.append("NE:  ").append(NE.toString().replaceAll("\n", "\n     ")).append('\n');
-      sb.append("SW:  ").append(SW.toString().replaceAll("\n", "\n     ")).append('\n');
-      sb.append("SE:  ").append(SE.toString().replaceAll("\n", "\n     ")).append('\n');
+      sb.append("NW:").append(NW.toString().replaceAll("\n", "\n   ")).append('\n');
+      sb.append("NE:").append(NE.toString().replaceAll("\n", "\n   ")).append('\n');
+      sb.append("SW:").append(SW.toString().replaceAll("\n", "\n   ")).append('\n');
+      sb.append("SE:").append(SE.toString().replaceAll("\n", "\n   "));
     }else{
       sb.append(points.toString());
     }

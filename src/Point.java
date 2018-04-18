@@ -9,6 +9,6 @@ public class Point<T> {
 
   @Override
   public String toString() {
-    return "Point "+value+": (" +coord.x+","+coord.y+")";
+    return "Point "+value+": " + coord;
   }
 }
