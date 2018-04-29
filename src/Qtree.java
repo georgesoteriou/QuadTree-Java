@@ -39,15 +39,15 @@ public class Qtree<T> {
   }
 
   private boolean addsubpoint(Point<T> point){
-    boolean bool = true;
+    boolean bool;
     if(NW.QtreeIntersectsPoint(point)){
-      bool &= NW.add(point);
+      bool = NW.add(point);
     }else if(NE.QtreeIntersectsPoint(point)){
-      bool &= NE.add(point);
+      bool = NE.add(point);
     }else if(SW.QtreeIntersectsPoint(point)){
-      bool &= SW.add(point);
+      bool = SW.add(point);
     }else if(SE.QtreeIntersectsPoint(point)){
-      bool &= SE.add(point);
+      bool = SE.add(point);
     }else{
       return false;
     }

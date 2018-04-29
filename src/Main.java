@@ -7,16 +7,17 @@ public class Main {
   private static final Coord MAXPOINTPOSITION = new Coord(10000,10000);
   static class range{
     static Coord topLeft = new Coord(32,42);
-    static Double width = 132.0;
-    static Double height = 42.0;
+    static Double width = 16.0;
+    static Double height = 14.0;
   }
 
   public static void main(String[] args) {
     Random random = new Random();
-    Qtree<Character> qtree = new Qtree<>(0, 0, Double.MAX_VALUE, 2);
+    Qtree<Character> qtree = new Qtree<>(0, 0, MAXPOINTPOSITION.x, 2);
     Set<Point> points = new HashSet<>();
-    for (int i = 0; i <NUMOFPOINTS; i++) {
-      Point<Character> point = new Point<>(random.nextDouble() * MAXPOINTPOSITION.x, random.nextDouble() * MAXPOINTPOSITION.y, (char) (random.nextInt('z' - 'a')+'a'));
+    for (int i = 0; i < NUMOFPOINTS; i++) {
+      Point<Character> point = new Point<>(random.nextDouble() * MAXPOINTPOSITION.x,
+              random.nextDouble() * MAXPOINTPOSITION.y, (char) (random.nextInt('z' - 'a') + 'a'));
       qtree.add(point);
       points.add(point);
     }
